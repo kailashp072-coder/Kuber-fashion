@@ -1,0 +1,191 @@
+05.02 12:08 PM
+Index.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kuber Fashion Partapur</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+  margin:0;
+  font-family: 'Segoe UI';
+  background:#000;
+  color:#fff;
+}
+
+/* HEADER */
+header {
+  background:#000;
+  padding:20px;
+  text-align:center;
+  font-size:28px;
+  color:gold;
+  letter-spacing:2px;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:50px 20px;
+  background:linear-gradient(to right, #000, #111);
+}
+.hero h1 {
+  font-size:32px;
+  color:gold;
+}
+.hero p {
+  color:#ccc;
+}
+
+/* NAV */
+nav {
+  display:flex;
+  justify-content:center;
+  background:#111;
+}
+nav button {
+  background:none;
+  border:none;
+  color:white;
+  padding:15px;
+  cursor:pointer;
+  font-size:16px;
+}
+nav button:hover {
+  color:gold;
+}
+
+/* SECTION */
+.section {
+  display:none;
+  padding:20px;
+}
+.active {
+  display:block;
+}
+
+/* PRODUCTS */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+  gap:15px;
+}
+
+.product {
+  background:#111;
+  padding:10px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.product:hover {
+  transform:scale(1.05);
+}
+
+.product img {
+  width:100%;
+  border-radius:10px;
+}
+
+.product h3 {
+  margin:5px 0;
+}
+
+.price {
+  color:gold;
+}
+
+/* BUTTON */
+.whatsapp {
+  background:green;
+  padding:8px;
+  display:block;
+  text-align:center;
+  margin-top:8px;
+  text-decoration:none;
+  color:white;
+  border-radius:5px;
+}
+
+/* FOOTER */
+footer {
+  text-align:center;
+  padding:20px;
+  background:#111;
+  margin-top:20px;
+  color:#aaa;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>KUBER FASHION</header>
+
+<div class="hero">
+<h1>Luxury Clothing Collection</h1>
+<p>Men | Women | Kids Wear - Partapur, Banswada</p>
+</div>
+
+<nav>
+<button onclick="show('men')">Men</button>
+<button onclick="show('women')">Women</button>
+<button onclick="show('kids')">Kids</button>
+</nav>
+
+<!-- MEN -->
+<div id="men" class="section active">
+<h2>Men Collection</h2>
+<div class="grid">
+<div class="product">
+<img src="https://via.placeholder.com/300">
+<h3>Formal Shirt</h3>
+<p class="price">₹799</p>
+<p>Cotton</p>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">Order</a>
+</div>
+</div>
+</div>
+
+<!-- WOMEN -->
+<div id="women" class="section">
+<h2>Women Collection</h2>
+<div class="grid">
+<div class="product">
+<img src="https://via.placeholder.com/300">
+<h3>Designer Kurti</h3>
+<p class="price">₹999</p>
+<p>Rayon</p>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">Order</a>
+</div>
+</div>
+</div>
+
+<!-- KIDS -->
+<div id="kids" class="section">
+<h2>Kids Collection</h2>
+<div class="grid">
+<div class="product">
+<img src="https://via.placeholder.com/300">
+<h3>Kids Set</h3>
+<p class="price">₹499</p>
+<p>Cotton</p>
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">Order</a>
+</div>
+</div>
+</div>
+
+<footer>
+© 2026 Kuber Fashion Partapur | Contact on WhatsApp
+</footer>
+
+<script>
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
